@@ -1,0 +1,3 @@
+[submodule "Libraries/OakD"]
+	path = Libraries/OakD
+	url = https://github.com/MiguelAgueda/OakD.git
