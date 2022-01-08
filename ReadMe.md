@@ -32,3 +32,29 @@ Other third party libraries are included below,
 2. Submodules included with the library.
 
     Pull and update submodules with `git submodule update --init --recursive 
+
+### Building ###
+
+From the AthleteAI root directory:
+
+```bash
+mkdir build
+cd build
+cmake ..
+make
+```
+
+### Running ###
+
+Connect the camera to the computer running AthleteAI.
+From the `build` folder, run:
+
+```bash
+./main
+```
+
+Or, from the AthleteAI root directory, run:
+
+```bash
+./build/main
+```
