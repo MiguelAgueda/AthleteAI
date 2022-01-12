@@ -14,9 +14,9 @@ COPY . /usr/src/dockertest1
 # Specify the working directory
 WORKDIR /usr/src/dockertest1
 
-RUN git submodule update --init --recursive
+RUN cd Libraries/OakD && git submodule update --init --recursive
 # Use GCC to compile the Test.cpp source file
-RUN rm -rf build && mkdir -p build && cd build && cmake .. && make -j 
+RUN cd /usr/src/dockertest1 && rm -rf build && mkdir -p build && cd build && cmake .. && make -j 
 
 # Run the program output from the previous step
 # CMD ["./Test"]
