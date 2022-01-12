@@ -9,14 +9,14 @@ RUN apt-get update;
 RUN apt-get install -y git cmake g++ gcc libusb-1.0-0-dev libopencv-dev;
 
 # Copy the current folder which contains C++ source code to the Docker image under /usr/src
-COPY . /usr/src/dockertest1
+RUN git clone https://github.com/MiguelAgueda/AthleteAI.git /usr/src/AthleteAI
 
 # Specify the working directory
-WORKDIR /usr/src/dockertest1
+WORKDIR /usr/src/AthleteAI
 
-RUN cd Libraries/OakD && git submodule update --init --recursive
+RUN git submodule update --init --recursive
 # Use GCC to compile the Test.cpp source file
-RUN cd /usr/src/dockertest1 && rm -rf build && mkdir -p build && cd build && cmake .. && make -j 
+RUN rm -rf build && mkdir -p build && cd build && cmake .. && make -j 
 
 # Run the program output from the previous step
 # CMD ["./Test"]
