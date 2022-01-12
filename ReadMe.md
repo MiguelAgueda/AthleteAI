@@ -15,7 +15,6 @@ With a 3D representation of the world, specific elements (like an athlete) can b
 
 ## How The F*ck Do I Run This Project? ##
 
-
 ### Hardware Requirements ### 
 
 1. Luxonis OakD Stereo Camera (Project tested with OakD-PoE).
@@ -31,7 +30,10 @@ Other third party libraries are included below,
 
 2. Submodules included with the library.
 
-    Pull and update submodules with `git submodule update --init --recursive 
+    Pull and update submodules with:
+        
+        `git submodule update --init --recursive` 
+
 
 ### Building ###
 
